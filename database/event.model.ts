@@ -82,5 +82,7 @@ EventSchema.pre<IEvent>("save", async function (this: IEvent) {
   }
 });
 
-export const Event: Model<IEvent> =
+const Event: Model<IEvent> =
   mongoose.models.Event || mongoose.model<IEvent>("Event", EventSchema);
+
+export default Event;
